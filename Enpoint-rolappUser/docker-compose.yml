@@ -1,0 +1,9 @@
+version: "3.1"
+
+services:
+  consulti-template-nodejs:
+    image: rol-user-tel
+    container_name: consulti-template-nodejs
+    restart: unless-stopped
+    ports:
+      - "8092:8092"
