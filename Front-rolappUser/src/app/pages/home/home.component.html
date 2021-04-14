@@ -1,0 +1,61 @@
+
+
+<div class="row">
+    <div class=" col-sm" > 
+      <div class="mx-3"> 
+        <p class="font-weight-bold" > Listado de Tareas </p> 
+        <p class="font-weight-bold">Usuario: {{ usuarioName }}</p>  
+      </div>
+    </div>
+    <div class=" col-sm " > 
+      <div class="d-flex flex-row-reverse my-4">
+        <button class="btn btn-outline-danger mx-1" >
+          LogOut
+        </button>
+        
+      </div>
+    </div>
+  </div> 
+  
+  <div class="row">
+  
+    <div class="col mx-3">
+      <h3 class="my-3 ml-3" >Tareas Programadas</h3>
+    </div>
+    <div class="mx-3 px-3 col">
+      <button class="btn btn-outline-success mx-3"
+        (click)="nuevaTarea()">
+        Tarea Nueva
+      </button>
+    </div>
+  
+  </div>
+  
+  <div class="row mx-3">
+    <table class="table table-striped mx-2">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombres</th>
+          <th scope="col">Email</th>
+          <th scope="col">Fecha </th>
+          <th scope="col">Fecha Final</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of Usuarios ; index as i ">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{ user.nombre  }}  {{ user.apellido }}</td>
+          <td>
+            {{ user.email  }}
+          </td>
+          <td> roles</td>
+          <td>App</td>
+          <td>
+            <button  class="btn btn-warning mx-1"> Edit </button>    
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
